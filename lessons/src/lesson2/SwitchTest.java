@@ -4,10 +4,11 @@ public class SwitchTest {
 
 
     public static void main(String[] args) {
-        System.out.println(convertSeason(3));
-        System.out.println(convertSeasonSwitch2(3));
-        System.out.println(convertSeasonSwitch3(3));
-        convertSeasonSwitch4(3);
+        // System.out.println(convertSeason(3));
+        // System.out.println(convertSeasonSwitch2(3));
+        //System.out.println(convertSeasonSwitch3(3));
+        System.out.println(convertSeasonSwitch21(3));
+        //convertSeasonSwitch4(3);
     }
 
     public static String convertSeason(int seasonNumber) {
@@ -50,6 +51,19 @@ public class SwitchTest {
         }
 
         return season;
+    }
+
+    static String convertSeasonSwitch21(int seasonNumber) {
+
+        return switch (seasonNumber) {
+            case 1 -> "Winter";
+            case 2 -> "Spring";
+            case 3 -> "Summer";
+            case 4 -> "Fall";
+            default -> "Unknown season";
+        };
+
+
     }
 
     static String convertSeasonSwitch2(int seasonNumber) {
