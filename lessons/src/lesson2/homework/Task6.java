@@ -1,5 +1,6 @@
 package lesson2.homework;
-
+// TO DO
+// это только копия другого. зделать всё ЗД6
 import java.util.Arrays;
 
 public class Task6 {
