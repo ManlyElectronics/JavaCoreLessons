@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class Task5 {
     public static void main(String[] args){
-                    int[] A  = new int[] { -221, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 , 0, 113 };
+                    int[] A  = new int[] { -13, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 , 0, 113 };
         System.out.println(Arrays.toString(A));
-            System.out.println(masMax(A));
-            System.out.println(masMin(A));
+            System.out.println("max:"+masMax(A));
+            System.out.println("min:"+masMin(A));
         }
         private static int masMax(int[] mas) {
         int max = mas[0] ;
