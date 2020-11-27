@@ -17,7 +17,7 @@ public class Task7 {
            }
         }
     }
-// вспомогательный метод вывода массива чтобы не загружать библиотеку
+// вспомогательный метод вывода массива чтобы не обращатся к библиотеке
     public static void printIntMas(int[] mas) {
         for (int ma : mas) System.out.printf("%2d ", ma);
         System.out.println();
