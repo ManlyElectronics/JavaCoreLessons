@@ -3,7 +3,6 @@ package lesson2.homework;
 public class Task6 {
     public static void main(String[] args){
     int[] A  = new int[] { 12, 1, 12 };
-       // System.out.println("length:"+ A.length);
         System.out.println(masSplitTest(A));
     }
         private static boolean masSplitTest(int[] mas){
@@ -14,7 +13,6 @@ public class Task6 {
               }
               return false;
         }
-        // видел можно проще зато по своему
         // сумма от d влево включая d
         private static int masSumB(int[] mas,int d ){
         int sum = 0;
