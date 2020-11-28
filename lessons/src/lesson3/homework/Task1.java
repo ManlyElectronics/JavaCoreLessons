@@ -1,21 +1,23 @@
 package lesson3.homework;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Task1 {
     public static Scanner sc =new Scanner(System.in);
     public static void main(String[] args) {
-        int x =5;
-        String message = "Введите число в пределах от 0 до 10";
-        System.out.println(x);
+        int max =9;
+        String message = "Введите число в пределах от 0 до 9";
         int d =1;
         while (d==1){
-            for (int i=0; i<3; i++) AskAndChekNumber(x, message);
-            d = AsksNumber("Повторить игру еще раз? 1 – да / 0 – нет", 0, 1);
-            if (d == 0) break;
+            Random rand = new Random();
+            int x = rand.nextInt(max);
+            // System.out.println(x);
+            for (int i=0; i<3; i++) AskAndChekNumber(x, max, message);
+            d = AsksNumber("Повторить игру еще раз? 1 – да / 0 – нет", 0, max);
         }
     }
-    private static void AskAndChekNumber(int x, String message) {
-        int d = AsksNumber(message, 0, 10);
+    private static void AskAndChekNumber(int x, int max, String message) {
+        int d = AsksNumber(message, 0, max);
         if (d== x) message = "вы угадали!";
         else if (d< x) message = "загаданное число больше";
         else message = "загаданое число меньше";
@@ -30,6 +32,4 @@ public class Task1 {
         } while (x < min || x > max);
         return x;
     }
-
-
 }
