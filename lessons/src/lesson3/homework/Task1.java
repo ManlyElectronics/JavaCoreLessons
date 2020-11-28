@@ -12,8 +12,8 @@ public class Task1 {
             Random rand = new Random();
             int x = rand.nextInt(max);
             // System.out.println(x);
-            for (int i=0; i<3; i++) AskAndChekNumber(x, max, message);
-            d = AsksNumber("Повторить игру еще раз? 1 – да / 0 – нет", 0, max);
+            for (int i=0; i<3; i++) AskAndChekNumber(x, max, message + ", у вас осталось " + (3 - i) + " попытки" );
+            d = AsksNumber("Число было "+ x +". Повторить игру еще раз? 1 – да / 0 – нет", 0, max);
         }
     }
     private static void AskAndChekNumber(int x, int max, String message) {
