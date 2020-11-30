@@ -43,5 +43,4 @@ public class Task2 {
         answer = sc.next();
         return answer;
     }
-
 }
