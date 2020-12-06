@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class X0sMy {
     //1. Создание игрового поля. Игровое поле можно представить в виде символьного двумерного массива размером 3х3. В каждой ячейке массива могут находиться символы 'X’, ‘O’, ‘•’, которые означают фишки игроков и пустое поле. Для указания размера поля и количества фишек для победы добавим две константы SIZE и DOTS_TO_WIN.
     public static char[][] map;
-    public static final int SIZE = 4;
+    public static final int SIZE = 3;
     public static final int DOTS_TO_WIN = 3;
 
     //    2. Ячейки поля. Чтобы не забыть, какой символ за что отвечает, их можно записать в именные константы.
@@ -144,10 +144,12 @@ public class X0sMy {
                 else n = 1;
                 if (n == DOTS_TO_WIN) return true;
         }
+        // TO DO
         // по побочной диагонали
-
+        int S = SIZE-1;
         for (int i= 0; i < SIZE ; i++) {
-            if ((map[i][SIZE-1-i] != EMPTY) && (map[i+1][SIZE-i] == map[i][SIZE-1-i]))
+            System.out.printf("map[%d]=%s\n",i,map[i][S-i]);
+            if ((map[i][S-i] != EMPTY) && (map[i+1][S-i-1] == map[i][S-i]))
                 n++;
             else n = 1;
             if (n == DOTS_TO_WIN) return true;
