@@ -3,7 +3,7 @@ package lesson4;
 import java.util.Random;
 import java.util.Scanner;
 
-public class X0sLesson {
+public class Lesson {
     //1. Создание игрового поля. Игровое поле можно представить в виде символьного двумерного массива размером 3х3. В каждой ячейке массива могут находиться символы 'X’, ‘O’, ‘•’, которые означают фишки игроков и пустое поле. Для указания размера поля и количества фишек для победы добавим две константы SIZE и DOTS_TO_WIN.
     public static char[][] map;
     public static final int SIZE = 3;
