@@ -1,13 +1,14 @@
 package lesson4.homework;
-
+// Крестики нолики. проверка победы путём сравнения соседних элементов и сщётчика. также проверяется произвольные диагонали данной длинны со здвигом вверх вних по Y
+// ученик Димитрий Рыцк
 import java.util.Random;
 import java.util.Scanner;
 
-public class X0sMy2 {
+public class TicTacToe {
     //Создание игрового поля.
     public static char[][] map;
-    public static final int SIZE = 4; //размера поля
-    public static final int DOTS_TO_WIN = 3; // для победы
+    public static final int SIZE = 4; //размер поля
+    public static final int DOTS_TO_WIN = 3; // нужно для победы
 
     //Ячейки поля. Чтобы не забыть, какой символ за что отвечает, их можно записать в именные константы.
     public static final char DOT_EMPTY = '.'; // пустое поле
@@ -35,7 +36,7 @@ public class X0sMy2 {
             aiTurn();
             printMap();
             if (checkWin()) {
-                System.out.println("Победил Искуственный Интеллект");
+                System.out.println("Победила случайность");
                 break;
             }
             if (isMapFull()) {
