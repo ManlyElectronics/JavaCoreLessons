@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class TicTacToe {
     //Создание игрового поля.
     public static char[][] map;
-    public static final int SIZE = 4; //размер поля
+    public static final int SIZE = 10; //размер поля
     public static final int DOTS_TO_WIN = 3; // нужно для победы
 
     //Ячейки поля. Чтобы не забыть, какой символ за что отвечает, их можно записать в именные константы.
