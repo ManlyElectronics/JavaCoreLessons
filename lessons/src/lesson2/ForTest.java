@@ -3,14 +3,14 @@ package lesson2;
 public class ForTest {
 
     public static void main(String[] args) {
-        //forSimple();
+        forSimple();
         // ForSycle();
     }
 
     private static void forSimple() {
         int i =0;
         for (; i<10; i++,print(i))
-        { }
+        {if (i==5) return; } // прерывание
         System.out.println("final "+i);
     }
     private  static  void print(int i) {System.out.println(i);}
