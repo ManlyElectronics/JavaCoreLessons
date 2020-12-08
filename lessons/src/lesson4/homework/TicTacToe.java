@@ -10,7 +10,7 @@ public class TicTacToe {
     public static final int SIZE = 10; //размер поля
     public static final int DOTS_TO_WIN = 3; // нужно для победы
 
-    //Ячейки поля. Чтобы не забыть, какой символ за что отвечает, их можно записать в именные константы.
+    //Ячейки поля.
     public static final char DOT_EMPTY = '.'; // пустое поле
     public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
@@ -19,9 +19,7 @@ public class TicTacToe {
 
     public static void main(String[] args) {
         initMap();
-        // TestFillMap();
         printMap();
-
         while (true) {
             humanTurn();
             printMap();
@@ -46,7 +44,7 @@ public class TicTacToe {
         }
         System.out.println("Игра закончена");
     }
-//Инициализация поля. заполнение символами пустого поля.
+//заполнение символами пустоты.
     public static void initMap() {
         map = new char[SIZE][SIZE];
         for (int i = 0; i < SIZE; i++) {
@@ -55,17 +53,7 @@ public class TicTacToe {
             }
         }
     }
-// тест ходы за себя
-    public static void TestFillMap() {
-
-        //for (int i = 0; i < SIZE; i++) {
-        int y =0;
-            for (int j = 0; j < SIZE; j++) {
-                map[j][y] = DOT_X;
-            }
-        //}
-    }
-//    4. Вывод поля в консоль. Первый цикл i отвечает за распечатку шапки игрового поля. внутренний j цикл отвечает за печать одной строки, после одной строки перевод каретки на следующую строку System.out.println(). После этого счетчик i увеличивается и производится печать следующих строк. После распечатки всего поля ставится дополнительная пустая строка для разделения выводов полей.
+//Вывод поля. Первый цикл i печатает шапку игрового поля. внутренний j цикл отвечает за печать одной строки, после одной строки перевод каретки на следующую строку System.out.println(). После этого счетчик i увеличивается и производится печать следующих строк. После распечатки всего поля ставится дополнительная пустая строка для разделения выводов полей.
     public static void printMap() {
         for (int i = 0; i <= SIZE; i++) {
             System.out.print(i + " ");
@@ -108,14 +96,14 @@ public class TicTacToe {
     }
 // Собственно ДЗ
 //Проверка победы по горизонталям, вертикалям и диагоналям зделанна сравнением соседних элементов и счёчиком n. Если равны сщётчик увеливается. если нет устанавливается снова в 1.
-// для упращения границы сканирования пренебрегаются и проверка валидности делается внутри checkWinMy
+// для упращения границы сканирования пренебрегаются и проверка валидности делается внутри areCellsEqual(соседние координаты)
 // включая со здвигом по диагоналям при размере больше 3
     public static boolean checkWin() {
         // проверка по строкам
         int n = 1;
         for (int y = 0; y < SIZE ; y++) {
              for (int x = 0; x < SIZE; x++) {
-                    if (checkWinMy(x,y,x+1,y)) n++;
+                    if (areCellsEqual(x,y,x+1,y)) n++;
                     else n = 1;
                     if (n == DOTS_TO_WIN) return true;
             }
@@ -123,7 +111,7 @@ public class TicTacToe {
         // по столбцам
         for (int x = 0; x < SIZE ; x++) {
             for (int y = 0; y < SIZE; y++) {
-                if (checkWinMy(x,y,x,y+1)) n++;
+                if (areCellsEqual(x,y,x,y+1)) n++;
                 else n = 1;
                 if (n == DOTS_TO_WIN) return true;
             }
@@ -131,7 +119,7 @@ public class TicTacToe {
         // по диагонали и со сдвигом по дигонали вверх вниз по Y
         for (int d = - SIZE; d < SIZE; d++) {
         for (int i= 0; i < SIZE ; i++) {
-            if (checkWinMy(i,i-d,i+1,i+1-d)) n++;
+            if (areCellsEqual(i,i-d,i+1,i+1-d)) n++;
                 else n = 1;
                 if (n == DOTS_TO_WIN) return true;
             }
@@ -139,7 +127,7 @@ public class TicTacToe {
         // по побочной диагонали и со сдвигом дигонали вверх вних по Y
         for (int d = -SIZE; d < SIZE; d++) {
         for (int i= 0; i < SIZE ; i++) {
-            if (checkWinMy(i,SIZE-1-i-d,i+1,SIZE-i-2-d)) n++;
+            if (areCellsEqual(i,SIZE-1-i-d,i+1,SIZE-i-2-d)) n++;
             else n = 1;
             if (n == DOTS_TO_WIN) return true;
         }
@@ -147,13 +135,12 @@ public class TicTacToe {
         return false;
     }
     // элемент существует и уже схожен ?
-    public static boolean isCellValidRangeAndNotEmpty(int x, int y) {
-        if (x < 0 || x >= SIZE || y < 0 || y >= SIZE || (map[x][y] == DOT_EMPTY)) return false;
-        return true;
+    public static boolean isCellValidAndNotEmpty(int x, int y) {
+        return !(x < 0 || x >= SIZE || y < 0 || y >= SIZE || (map[x][y] == DOT_EMPTY));
     }
     // соседние элементы существуют схожены и равны ?
-public static boolean checkWinMy(int x,int y,int x1, int y1){
-    if (!isCellValidRangeAndNotEmpty(x,y) || !isCellValidRangeAndNotEmpty(x1,y1)) return false;
+public static boolean areCellsEqual(int x, int y, int x1, int y1){
+    if (!isCellValidAndNotEmpty(x,y) || !isCellValidAndNotEmpty(x1,y1)) return false;
      return map[x][y] == map[x1][y1];
 }
     public static boolean isMapFull() {
