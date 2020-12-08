@@ -111,7 +111,6 @@ public class TicTacToe {
 // для упращения границы сканирования пренебрегаются и проверка валидности делается внутри checkWinMy
 // включая со здвигом по диагоналям при размере больше 3
     public static boolean checkWin() {
-        // TO DO
         // проверка по строкам
         int n = 1;
         for (int y = 0; y < SIZE ; y++) {
@@ -129,7 +128,7 @@ public class TicTacToe {
                 if (n == DOTS_TO_WIN) return true;
             }
         }
-        // по диагонали и со сдигом дигонали врех вниз по Y
+        // по диагонали и со сдвигом по дигонали вверх вниз по Y
         for (int d = - SIZE; d < SIZE; d++) {
         for (int i= 0; i < SIZE ; i++) {
             if (checkWinMy(i,i-d,i+1,i+1-d)) n++;
@@ -137,7 +136,7 @@ public class TicTacToe {
                 if (n == DOTS_TO_WIN) return true;
             }
         }
-        // по побочной диагонали и со сдигом дигонали вверх вних по Y
+        // по побочной диагонали и со сдвигом дигонали вверх вних по Y
         for (int d = -SIZE; d < SIZE; d++) {
         for (int i= 0; i < SIZE ; i++) {
             if (checkWinMy(i,SIZE-1-i-d,i+1,SIZE-i-2-d)) n++;
