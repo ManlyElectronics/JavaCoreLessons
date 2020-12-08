@@ -116,7 +116,7 @@ public class TicTacToe {
                 if (n == DOTS_TO_WIN) return true;
             }
         }
-        // по диагонали и со сдвигом по дигонали вверх вниз по Y
+        // по диагонали и со сдвигом d по дигонали вверх вниз по Y
         for (int d = - SIZE; d < SIZE; d++) {
         for (int i= 0; i < SIZE ; i++) {
             if (areCellsEqual(i,i-d,i+1,i+1-d)) n++;
@@ -124,7 +124,7 @@ public class TicTacToe {
                 if (n == DOTS_TO_WIN) return true;
             }
         }
-        // по побочной диагонали и со сдвигом дигонали вверх вних по Y
+        // по побочной диагонали и со сдвигом d дигонали вверх вних по Y
         for (int d = -SIZE; d < SIZE; d++) {
         for (int i= 0; i < SIZE ; i++) {
             if (areCellsEqual(i,SIZE-1-i-d,i+1,SIZE-i-2-d)) n++;
