@@ -4,9 +4,10 @@ package lesson5;
 public class Cat {
 
     protected String name;
+    protected String фамилия;
     protected String color;
-    private int age;
-    private static int catCount;
+    private int age = 1 ;
+    private static int catCount; // почему нет в списке полей каждого cat в дебагере ?
 
     public static void getCatCount(){
         System.out.println("Количество котиков: " + catCount);
