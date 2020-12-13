@@ -1,7 +1,5 @@
 package lesson5.homework;
 
-import lesson5.onetest.Person;
-
 import java.util.Random;
 
 public class Homework {
