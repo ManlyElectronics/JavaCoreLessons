@@ -1,7 +1,5 @@
 package lesson5;
 
-import lesson4.*;
-
 public class Main {
 
 
@@ -39,7 +37,6 @@ public class Main {
         Cat.getCatCount();
 
 
-//        TicTacToe.turnGame();
     }
 
 }
