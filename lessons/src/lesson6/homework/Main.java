@@ -11,18 +11,18 @@ package lesson6.homework;
 
 public class Main {
     public static void main(String[] args) {
-        Cat MyCat = new Cat(200,2,0);
-        Dog MyDog = new Dog(400,0.5,10);
-        Dog YourDog = new Dog(600,  0.5,10);
-        MyCat.run(100);
-        MyCat.run(300);
-        MyCat.swim(10);
-        MyDog.run(200);
-        MyDog.run(500);
-        MyDog.swim(5);
-        System.out.println(MyDog.jump(50));
-        System.out.println(MyDog.jump(0.1));
-        YourDog.run(550);
+        Cat myCat = new Cat(200, 2, 0);
+        Dog myDog = new Dog(400, 0.5, 10);
+        Dog yourDogg = new Dog(600, 0.5, 10);
+        myCat.run(100);
+        myCat.run(300);
+        myCat.swim(10);
+        myDog.run(200);
+        myDog.run(500);
+        myDog.swim(5);
+        System.out.println(myDog.jump(50));
+        System.out.println(myDog.jump(0.1));
+        yourDogg.run(550);
 
     }
 }
