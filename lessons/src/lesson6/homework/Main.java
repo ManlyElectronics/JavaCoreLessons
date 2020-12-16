@@ -19,6 +19,7 @@ public class Main {
         MyCat.swim(10);
         MyDog.run(200);
         MyDog.run(500);
+        MyDog.swim(5);
         System.out.println(MyDog.jump(50));
         System.out.println(MyDog.jump(0.1));
         YourDog.run(550);
