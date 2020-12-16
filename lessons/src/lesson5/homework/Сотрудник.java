@@ -5,9 +5,9 @@ public class Сотрудник {
     private static int countEmp;
     private int id;
 
-    private String Фамилия;
-    private String Имя;
-    private String Отчество;
+    private String фамилия;
+    private String имя;
+    private String отчество;
 
     private String должность;
 
@@ -17,10 +17,10 @@ public class Сотрудник {
     private int зарплата;
     private int возраст;
 
-    public Сотрудник(String Фамилия, String Имя, String Отчество, String должность, String email, String телефон, int зарплата, int возраст) {
-        this.Имя = Имя;
-        this.Фамилия = Фамилия;
-        this.Отчество = Отчество;
+    public Сотрудник(String фамилия, String имя, String отчество, String должность, String email, String телефон, int зарплата, int возраст) {
+        this.имя = имя;
+        this.фамилия = фамилия;
+        this.отчество = отчество;
         this.должность = должность;
         this.email = email;
         this.телефон = телефон;
@@ -38,8 +38,8 @@ public class Сотрудник {
         System.out.println(this);
     }
 
-   @Override
+    @Override
     public String toString() {
-        return id +" |  " + Фамилия + " | " + Имя + " |  " + Отчество + " | " + должность + " | " + email + " | " + телефон + " | " + зарплата + " | " +  возраст;
+        return id + " |  " + фамилия + " | " + имя + " |  " + отчество + " | " + должность + " | " + email + " | " + телефон + " | " + зарплата + " | " + возраст;
     }
 }

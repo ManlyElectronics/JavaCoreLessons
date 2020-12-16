@@ -28,12 +28,12 @@ public class Homework {
                 "Фамилия" + i,
                 "Имя" + i,
                 "Отчество" + i,
-                "Software Engineer "+ i,
-        "test" + i + "@test.com",
+                "Software Engineer " + i,
+                "test" + i + "@test.com",
                 "+7920555778" + i,
                 2000 + i * 100,
                 ageRandomize.nextInt(30) + 30);
-                // ,
-                // 2000 + i * 100);
+        // ,
+        // 2000 + i * 100);
     }
 }
