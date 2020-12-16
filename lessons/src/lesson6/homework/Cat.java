@@ -3,7 +3,7 @@ package lesson6.homework;
 public class Cat extends Animal{
 
 
-    Cat(int runLimit, int jumpLimit, int swimLimit) {
+    Cat(int runLimit, double jumpLimit, int swimLimit) {
         super(runLimit, jumpLimit, swimLimit);
     }
 
