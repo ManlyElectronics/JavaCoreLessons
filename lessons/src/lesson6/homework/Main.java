@@ -14,6 +14,7 @@ public class Main {
         Cat myCat = new Cat(200, 2, 0);
         Dog myDog = new Dog(400, 0.5, 10);
         Dog yourDogg = new Dog(600, 0.5, 10);
+        Dog2 dogFast = new Dog2(0.5,10);
         myCat.run(100);
         myCat.run(300);
         myCat.swim(10);
