@@ -26,7 +26,7 @@ public class Test {
         for (Cat cat : cats) { // проверяем сытость
             System.out.println(cat.name + " сытый ? " + cat.isfull);
         }
-        plate.setFood(100);
-        plate.info();
+        plate.setFood(100); // добавляем в тарелку
+        plate.info(); // проверяем сколько стало в тарелке
     }
 }
