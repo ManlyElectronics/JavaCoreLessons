@@ -20,8 +20,10 @@ protected int Возраст =1;
        System.out.println(this);
     }
 
+
     @Override
     public String toString() {
          return "Имя: " + this.Имя + "  Возраст: " + this.Возраст;
     }
+
 }

@@ -7,11 +7,11 @@ public class Test {
         Plate plate = new Plate(100); // создаётся тарелка
         plate.info(); // выводим сколько в тарелке
         cat1.eat(plate); // кот ест из тарелки
-        System.out.println("cat1 сытый ? " + cat1.isfull);
+        System.out.println("cat1 сытый ? " + cat1.isFull);
         plate.info();
         cat2.eat(plate);
         plate.info();
-        System.out.println("cat2 сытый ? " + cat2.isfull);
+        System.out.println("cat2 сытый ? " + cat2.isFull);
         Cat[] cats = {
                 new Cat("кот1", 10, false),
                 new Cat("кот2", 20, false),
@@ -24,7 +24,7 @@ public class Test {
             cat.eat(plate_for_cats); // кормим котов
         }
         for (Cat cat : cats) { // проверяем сытость
-            System.out.println(cat.name + " сытый ? " + cat.isfull);
+            System.out.println(cat.name + " сытый ? " + cat.isFull);
         }
         plate.setFood(100); // добавляем в тарелку
         plate.info(); // проверяем сколько стало в тарелке

@@ -23,7 +23,7 @@ public class Main {
         // System.out.println("cat1.Имя: " + cat1.Имя);
     }
 
-    private static Cat makeCat(int i) {
+   private static Cat makeCat(int i) {
         return new Cat("Имя " + i, i);
     }
 }

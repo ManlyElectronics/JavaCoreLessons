@@ -1,4 +1,4 @@
-package lesson8.borderlayout.homework;
+package lesson8.borderlayout.homework.Test;
 // выводит просто поле
 
 import javax.swing.*;
@@ -8,10 +8,10 @@ class MainWindow extends JFrame {
     MainWindow() {
         setTitle("Java Window");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setBounds(300, 400, 300, 200);
+        setBounds(250, 300, 200, 200);
         setVisible(true);
-        JLabel label1 = new JLabel("привет");
-        label1.setText(PromptWindow.output);
+        JLabel label1 = new JLabel();
+        label1.setText(PromptWindow.outputMessage);
         add(label1);
         PromptWindow promptwindow = new PromptWindow();
 

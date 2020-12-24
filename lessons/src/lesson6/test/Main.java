@@ -1,4 +1,4 @@
-package lesson6.animals;
+package lesson6.test;
 
 import java.util.Random;
 
@@ -12,8 +12,8 @@ public class Main {
         Animal duck = new Duck("Дональд Дак");
 //        duck.fly();
 
-        int a = 3;
-        System.out.println((double) a);
+       // int a = 3;
+       // System.out.println((double) a); // пример кастинга
 
         //new Animal("it");
 
@@ -38,7 +38,7 @@ public class Main {
         };
 
         for (Object object : objects) {
-            System.out.println(object);
+            System.out.println("обьект" + object);
 //            object.
         }
 
