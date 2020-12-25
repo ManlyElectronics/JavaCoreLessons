@@ -6,11 +6,11 @@ public class Main {
     public static void main(String[] args) {
 
         CatNew cat = new CatNew();
-
+// cat.foo();
         cat.name = "A";
         cat.color = "red";
         cat.age = 5;
-//        cat.weight = 10;
-
+        // cat.weight = 10;
+System.out.println(cat);
     }
 }

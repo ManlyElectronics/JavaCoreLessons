@@ -1,29 +1,34 @@
 package lesson5.MyTry;
 
-public class Cat {
-protected String Имя = "Имя по умолчанию";
-protected int Возраст =1;
+class Cat {
+    String Имя = "Имя по умолчанию";
+    int Возраст = 1;
+    String color = "не задан";
 
 
-   public Cat (String name, int age){
-    this.Имя = name; // если не определять здесь берётся по умолчанию
-    this.Возраст = age;
+    Cat(String name, int age) {
+        this.Имя = name; // если не определять здесь берётся по умолчанию
+        this.Возраст = age;
 // Зачем задавать параметры через метод ?
-}
+    }
 
-   public Cat() {
-      //  String name = "неизвестное имя";
+    Cat() {
+        //  String name = "неизвестное имя";
         System.out.println("подобрал безимянного кота");
     }
-    public void printInfo(){ System.out.println("Имя: " + this.Имя + "  Возраст: " + this.Возраст); }
-    public void info(){
-       System.out.println(this);
+
+    public void printInfo() {
+        System.out.println("Имя: " + this.Имя + "  Возраст: " + this.Возраст + " Цвет :" + color);
+    }
+
+    public void info() {
+        System.out.println(this);
     }
 
 
     @Override
     public String toString() {
-         return "Имя: " + this.Имя + "  Возраст: " + this.Возраст;
+        return "Имя: " + this.Имя + "  Возраст: " + this.Возраст;
     }
 
 }
