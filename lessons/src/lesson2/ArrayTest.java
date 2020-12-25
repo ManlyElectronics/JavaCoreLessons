@@ -40,7 +40,7 @@ public class ArrayTest {
             System.out.println();
         }*/
 
-        for (int[] ints : deepArray) {
+        /*for (int[] ints : deepArray) {
             for (int anInt : ints) {
                 System.out.printf("%2d ", anInt);
             }
@@ -50,10 +50,10 @@ public class ArrayTest {
         String str = "Hello world";
         for (char c : str.toCharArray()) {
             System.out.println(c);
-        }
+        }*/
 
 
-        for (int i = 0; i < 3000; i++) {
+        for (int i = 0; i < 30; i++) {
             System.out.printf("%d: %c\t", i, i);
             if (i % 15 == 0) {
                 System.out.println();
