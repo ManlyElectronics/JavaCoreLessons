@@ -1,1 +1,1 @@
-# JavaCoreLessons
+# few JavaCoreLessons from GeekBrains
